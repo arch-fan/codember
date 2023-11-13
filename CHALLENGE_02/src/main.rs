@@ -19,7 +19,7 @@ fn interpreter(symbol: char, result: &mut i32, output: &mut String) {
     match symbol {
         '#' => *result += 1,
         '@' => *result -= 1,
-        '*' => *result = *result * 2,
+        '*' => *result = *result * *result,
         '&' => output.push_str(&result.to_string()),
         _ => {}
     }
